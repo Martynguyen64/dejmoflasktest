@@ -29,6 +29,7 @@ class DietAPI(Resource):
 
         entry = FitnessEntry(
             args["username"],
+            args["diet_name"],
             args["calories"],
             args["protein"],
             args["fat"],
