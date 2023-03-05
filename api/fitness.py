@@ -14,7 +14,7 @@ class DietAPI(Resource):
     class _ReadAll(Resource):
         def get(self):
             query = FitnessEntry.query.all()    # read/extract all players from database
-            json_ready = [player.read() for player in query]  # prepare output in json
+            json_ready = [player.read() for player in query]  # prepare output in json body
             return jsonify(json_ready)  # jsonify creates Flask response object, more specific to APIs than json.dumps
         
     class _ReadPerson(Resource):
